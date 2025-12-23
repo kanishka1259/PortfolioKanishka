@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanishka · Contact</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <!-- HEADER (same on all pages) -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="nav-logo">KANISHKA · <span>PORTFOLIO</span></div>
+
+      <button class="nav-toggle" id="navToggle">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="home.html#about">About</a>
+        <a href="home.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="hackathons.html">Hackathons</a>
+        <!-- 🔴 IMPORTANT: make this href EXACTLY the same
+             as the page where it already works (blogs.html or researchBlogs.html) -->
+        <a href="researhBlogs.html">Research Blogs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="contact-main">
+    <section class="contact-section">
+      <div class="contact-card">
+        <h1>Contact Me</h1>
+        <p class="contact-text">
+          Feel free to reach out if you’d like to collaborate, ask a question,
+          or just say hi.
+        </p>
+
+        <div class="contact-chip-row">
+          <a href="mailto:kanishkaa1302@gmail.com">kanishkaa1302@gmail.com</a> ·
+          <a href="https://github.com/kanishka1259" target="_blank">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/kanishka-senthilkumar-22b512291" target="_blank">LinkedIn</a>
+        </div>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Message" rows="4"></textarea>
+          <button type="submit">Send</button>
+        </form>
+
+        <p class="contact-note">I usually reply within 1–2 days.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Kanishka</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanishka · Certifications</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="certifications.css" />
+</head>
+<body>
+
+  <!-- HEADER (same as other pages) -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="nav-logo">KANISHKA · <span>PORTFOLIO</span></div>
+
+      <button class="nav-toggle" id="navToggle">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="home.html#about">About</a>
+        <a href="home.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="researhBlogs.html">Research Blogs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="cert-main">
+    <section id="certifications" class="cert-section">
+      <div class="cert-header">
+        <div class="section-label">Achievements</div>
+        <h1 class="cert-title">Certifications</h1>
+        <p class="cert-sub">
+          A snapshot of courses and certifications that shaped my learning in
+          Machine Learning, Full-Stack development and core CS.
+        </p>
+      </div>
+
+      <div class="cert-layout">
+        <!-- LEFT: list -->
+        <aside class="cert-list">
+          <h3>Certificates</h3>
+          <ul>
+  <li class="cert-item active" data-key="nptel-ml">
+    NPTEL – Introduction to Machine Learning (IIT Madras)
+  </li>
+  <li class="cert-item" data-key="nptel-dl">
+    NPTEL – Deep Learning (IIT Ropar)
+  </li>
+  <li class="cert-item" data-key="udemy-web">
+    Udemy – The Web Developer Bootcamp
+  </li>
+  <li class="cert-item" data-key="udemy-java">
+    Udemy – Java 17 Masterclass: Start Coding in 2024
+  </li>
+  <li class="cert-item" data-key="rags">
+    From RAGs to Riches – RAG Workshop
+  </li>
+</ul>
+
+        </aside>
+
+        <!-- RIGHT: detail -->
+        <article class="cert-detail">
+          <h2 id="cert-title">Machine Learning Foundations</h2>
+          <p id="cert-issuer" class="cert-issuer">
+            Issued by: <span>NPTEL · IIT Madras</span>
+          </p>
+          <p id="cert-date" class="cert-date">
+            Completed: <span>2024</span>
+          </p>
+
+          <div id="cert-tags" class="cert-tags">
+            <!-- filled by JS -->
+          </div>
+
+          <p id="cert-description" class="cert-description">
+            Introductory course that covered core machine learning concepts such as
+            supervised learning, model evaluation, basic regression and
+            classification, with hands-on practice in Python.
+          </p>
+
+          <p id="cert-notes" class="cert-notes">
+            This course helped me build a strong base for later projects in ML
+            and deep learning.
+          </p>
+
+          <div class="cert-links">
+            <a id="cert-view-link" href="#" target="_blank">View Certificate</a>
+          </div>
+
+          <div class="cert-preview-wrapper">
+            <h3>Preview</h3>
+            <!-- you can swap this img for embedded pdf if you want later -->
+            <img id="cert-preview" src="certs\NPTEL_ML.jpg" alt="Certificate preview" />
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (same as other pages) -->
+  <footer id="contact" class="footer">
+    <p>
+    Contact info:
+    <a href="mailto:kanishkaa1302@gmail.com">kanishkaa1302@gmail.com</a> ·
+    <a href="https://github.com/kanishka1259" target="_blank">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/kanishka-senthilkumar-22b512291" target="_blank">LinkedIn</a>
+    </p>
+    <p>© 2025 Kanishka</p>
+  </footer>
+
+  <script src="certifications.js"></script>
+</body>
+</html>

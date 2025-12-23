@@ -1,0 +1,580 @@
+:root {
+  --bg-dark: #ffffff;
+  --bg-mid: #ffffff;
+  --bg-light: #f9fafb;
+  --accent: #930271;
+  --accent-soft: rgba(99, 102, 241, 0.15);
+  --text-main-dark: #000000;
+  --text-muted-dark: #6b7280;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #ffffff;
+  color: white;
+}
+
+/* ========= HEADER (fixed) ========= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  z-index: 100;
+  backdrop-filter: blur(14px);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.nav-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.nav-logo span {
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.1rem;
+  font-size: 0.86rem;
+}
+
+.nav-links a {
+  position: relative;
+  color: #000000;
+  opacity: 0.75;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.2s ease;
+  
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* ========= FOOTER (fixed) ========= */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  padding: 0.4rem 1.2rem;
+  background: #ffffff;
+  border-top: 1px solid #ffffff;
+  color: #000000;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  z-index: 90;
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ========= MAIN LAYOUT ========= */
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 56px 1.2rem 52px; /* space for header & footer */
+}
+
+/* each page fills viewport (minus header+footer) */
+.page-section {
+  min-height: calc(100vh - 108px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========= HERO (PAGE 1) ========= */
+
+.hero-section {
+  position: relative;
+
+  /* make this section full-width */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  /* full background image */
+  background: url("background4.jpg") center center no-repeat fixed;
+  background-size: cover;
+
+  color: #000000;
+  overflow: hidden;
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: heroDropIn 0.5s ease-out forwards;
+}
+
+
+.hero-inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  /* SHIFT TEXT TOWARD CENTER OF SCREEN */
+  padding-left: 18vw;      /* increase from 6vw → 10vw */
+  max-width: 600px;        /* keeps text nicely boxed */
+  text-align: left;        
+}
+
+.hero-name {
+  font-size: clamp(4rem, 8vw, 4rem);
+  font-weight: 700;
+}
+
+.hero-role {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.hero-tagline {
+  font-size: 1.7rem;
+  opacity: 0.9;
+  max-width: 26rem;
+
+}
+
+.btn-primary,
+.btn-secondary {
+  border-radius: 999px;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.84rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  border-radius: 999px;
+  padding: 0.55rem 1.2rem;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  background: rgb(121, 82, 123);
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.btn-secondary {
+  margin-top: 1rem;
+  border: 1px solid rgba(126, 172, 218, 0.7);
+  background: rgba(164, 89, 164, 0.4);
+  color: #000000;
+  padding: 0.8rem 1.7rem;
+  font-size: 1rem;
+  transition: 0.25s ease;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo-wrapper {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 1.4rem;
+  padding: 0.35rem;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.4),
+    rgb(220, 185, 227)
+  );
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.9);
+}
+
+.hero-photo-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 1.1rem;
+  object-fit: cover;
+  height: 350px; /* adjust for your photo */
+}
+
+/* hero disappears when scrolling down */
+.hero-section.hero-exit {
+  animation: heroSlideOutUp 0.8s ease forwards;
+}
+
+/* ========= ABOUT & SKILLS PAGES ========= */
+
+.text-section {
+  background: var(--bg-light);
+  color: var(--text-main-dark);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+#skills.text-section {
+  background: linear-gradient(to bottom, #f0d7d7 ,  #b6bfe4 100%);
+  color: white;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.section-inner {
+  max-width: 720px;
+  transform: translateX(-80px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.section-inner.enter {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.section-inner.exit {
+  transform: translateX(-80px);
+  opacity: 0;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.9rem;
+  color:#000000;
+}
+
+.text-section p {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--text-muted-dark);
+  margin-bottom: 0.5rem;
+}
+
+#skills.text-section p,
+#skills.text-section li {
+  color: #101010;
+}
+
+/* Skills layout */
+.skills-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.skills-layout h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+.skills-columns{
+  display:flex;
+  gap:4rem;
+  flex-wrap:wrap;
+}
+
+.skills-col{
+  min-width:260px;
+  
+}
+
+.skills-col h3{
+  margin-bottom:0.5rem;
+  font-size:1.2rem;
+  color:#000000;
+
+}
+
+.skills-col ul{
+  list-style: none;
+  padding:0;
+  opacity:0.85;
+
+}
+
+.skills-col li{
+  margin-bottom:6px;
+  
+}
+.skills-col li::before{
+  content: "•";
+  color:#000;     /* bullet color */
+  margin-right:8px;
+}
+/* wider inner container only for skills */
+.section-inner-skills{
+  max-width: 1040px;
+}
+
+/* 3 cards spread out */
+.skills-grid-3{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem 2.5rem;
+  margin-top: 1.5rem;
+}
+/* make skills section wider than others */
+#skills .section-inner{
+  max-width: 1200px;   /* instead of 720 */
+  width: 100%;
+  padding: 0 2rem;
+}
+
+/* individual cards */
+.skill-card{
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  padding: 1.1rem 1.3rem;
+  box-shadow: 0 10px 25px rgba(15,23,42,0.12);
+}
+
+.skill-card h3{
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  color: #000;
+}
+
+.skill-card ul{
+  list-style: none;
+  padding-left: 0.2rem;
+}
+
+.skill-card li{
+  color: #000;
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+}
+
+.skill-card li::before{
+  content: "•";
+  color: #000;
+  margin-right: 6px;
+}
+
+.skills-grid-3{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+}
+
+.chips span {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(55, 65, 81, 0.8);
+}
+
+.projects-list {
+  list-style: none;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.projects-list li::before {
+  content: "•";
+  color: var(--accent);
+  margin-right: 0.4rem;
+}
+
+/* ========= ANIMATIONS ========= */
+@keyframes heroDropIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heroSlideOutUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* ========= RESPONSIVE ========= */
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  main {
+    padding-inline: 1rem;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    left: 0;
+    background: rgba(15, 23, 42, 0.97);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 1.2rem 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .nav-links.open {
+    max-height: 240px;
+  }
+
+  .skills-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+#hero,
+#about,
+#skills {
+  border-radius: 30px;    /* adjust size */
+  overflow: hidden;       /* important so background follows the curve */
+}
+
+/* ================= BUTTERFLY BACKGROUND ================= */
+
+.butterfly-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.butterfly {
+  position: absolute;
+  font-size: 28px;  /* bigger emoji */
+  opacity: 0.9;
+  animation: flyRandom infinite;
+}
+
+/* diagonal random flying animation */
+@keyframes flyRandom {
+  0% {
+    transform: translate(0, 100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate(var(--endX), -20vh) rotate(var(--angle));
+    opacity: 0;
+  }
+}

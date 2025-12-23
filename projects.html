@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanishka · Projects</title>
+
+  <!-- reuse your main styles + add page-specific css -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="projects.css" />
+</head>
+<body>
+
+  <!-- same header as home -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="nav-logo">KANISHKA · <span>PORTFOLIO</span></div>
+
+      <button class="nav-toggle" id="navToggle">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="home.html#about">About</a>
+        <a href="home.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="researhBlogs.html">Research Blogs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="projects-main">
+    <section id="projects" class="projects-section">
+
+      <div class="projects-header">
+        <div class="section-label">Work</div>
+        <h1 class="projects-title">Projects</h1>
+        <p class="projects-sub">
+          A mix of Machine Learning, Full-Stack and optimisation projects I’ve worked on.
+        </p>
+      </div>
+
+      <div class="projects-layout">
+        <!-- LEFT: project list -->
+        <aside class="projects-list">
+          <h3>Project List</h3>
+          <ul>
+  <li class="project-item active" data-key="gender">
+    Gender Classification (CNN)
+  </li>
+  <li class="project-item" data-key="seismic">
+    Seismic Event Detection using Time-Series Data
+  </li>
+  <li class="project-item" data-key="cot-geo">
+    Chain-of-Thought LLM for Geospatial Analysis
+  </li>
+  <li class="project-item" data-key="sitrezhuthu">
+    Sitrezhuthu – Personal Portfolio Generator
+  </li>
+  <li class="project-item" data-key="digits">
+    Recognizing Handwritten Digits (K-Means)
+  </li>
+  <li class="project-item" data-key="mini-c">
+    Mini Projects in C (2048 &amp; Calendar)
+  </li>
+  <li class="project-item" data-key="ui-designs">
+    Simple UI Designs (Alarm Clock &amp; Calculator)
+  </li>
+</ul>
+
+        </aside>
+
+        <!-- RIGHT: details + video -->
+        <article class="project-detail">
+          <h2 id="project-title">Gender Classification (CNN)</h2>
+
+          <p id="project-tagline" class="project-tagline">
+            Computer Vision · Deep Learning · TensorFlow
+          </p>
+
+          <div id="project-tags" class="project-tags">
+            <!-- filled by JS -->
+          </div>
+
+          <p id="project-description" class="project-description">
+            Developed a Convolutional Neural Network (CNN) model to classify gender from facial images.,
+
+          </p>
+
+          <p id="project-extra" class="project-extra">
+            Implemented image preprocessing, feature extraction and model evaluation techniques in Python and TensorFlow, gaining hands-on understanding of CNN architectures and performance tuning.
+          </p>
+
+          <div class="project-links">
+            <a id="project-code-link" href="https://github.com/kanishka1259/Gender-Classification-using-CNN" target="_blank">View Code (GitHub)</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- same footer -->
+  <footer id="contact" class="footer">
+    <p>
+    Contact info:
+    <a href="mailto:kanishkaa1302@gmail.com">kanishkaa1302@gmail.com</a> ·
+    <a href="https://github.com/kanishka1259" target="_blank">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/kanishka-senthilkumar-22b512291" target="_blank">LinkedIn</a>
+    </p>
+    <p>© 2025 Kanishka</p>
+  </footer>
+
+  <script src="projects.js"></script>
+</body>
+</html>

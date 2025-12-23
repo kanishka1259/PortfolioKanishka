@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanishka · Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Dashboard (fixed) -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="nav-logo">Kanishka · <span>Portfolio</span></div>
+      <button class="nav-toggle" id="navToggle">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <!-- other pages -->
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="researhBlogs.html">Research Blogs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="butterfly-layer" id="butterflyLayer"></div>
+
+
+  <main>
+    <!-- PAGE 1: HERO (drops down, then disappears on scroll) -->
+    <section id="hero" class="page-section hero-section">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-name">Kanishka S</h1>
+          <p class="hero-role">Computer Science Student</p>
+          <h2 class="hero-tagline">
+            Building Machine Learning for real-world impact.
+          </h2>
+          <button class="btn-primary" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
+            About Me
+          </button>
+
+          <div class="hero-buttons">
+            <a href="KANISHKAS_RESUMEsem5.pdf" class="btn-secondary" download>Resume Download</a>
+            <a href="projects.html" class="btn-secondary">Projects</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-photo-wrapper">
+            <!-- change to your real image file -->
+            <img src="kani2.jpeg" alt="Kanishka" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: ABOUT -->
+     <section id="about" class="page-section text-section">
+  <div class="section-inner">
+    <div class="section-label">About</div>
+    <h2 class="section-title">Who I am</h2>
+
+    <p>
+      Hi, I'm Kanishka, a Computer Science Engineering student interested in Machine Learning and Full-Stack development. I enjoy learning by doing—whether it's trying out new ML concepts, building small applications, or understanding how things work behind the scenes.
+    </p>
+
+    <p>
+      I'm currently studying core CS, ML and deep learning fundamentals, along with tools and technologies that help me build practical projects. My main interest areas include Machine Learning, Computer Vision, geospatial and time-series data, optimisation, and applying technology to solve useful real-world problems.
+    </p> 
+
+    <p>
+      Right now, I'm focused on improving my technical skills and building projects that help me grow step by step. My goal is to eventually work on meaningful technology that creates impact and allows me to keep learning, exploring and developing as an engineer.
+    </p>
+
+  </div>
+</section>
+
+
+    <!-- PAGE 3: SKILLS + MAIN PROJECTS (same animation pattern) -->
+    <!-- PAGE 3: SKILLS (full skills page) -->
+  <section id="skills" class="page-section text-section">
+  <div class="section-inner section-inner-skills">
+    <div class="section-label">Skills & Work</div>
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid-3">
+      <!-- Technical -->
+      <div class="skill-card">
+        <h3>Technical</h3>
+        <ul>
+  <li>Python, C, C++, Java, MATLAB, JavaScript, Haskell</li>
+  <li>HTML &amp; CSS</li>
+  <li>MySQL</li>
+  <li>Google Colab, VS Code, TinkerCAD, Dev++, Code::Blocks, Git &amp; GitHub</li>
+  <li>Exploratory Data Analysis, Model Building, Clustering, Predictive Modelling, Performance Evaluation</li>
+</ul>
+
+      </div>
+
+      <!-- Concepts / CS -->
+      <div class="skill-card">
+        <h3>Concepts / CS</h3>
+        <ul>
+          <li>Algorithms &amp; DSA</li>
+          <li>Operating Systems</li>
+          <li>Networks (basics)</li>
+          <li>Object-Oriented Programming</li>
+        </ul>
+      </div>
+
+      <!-- Non-Technical -->
+      <div class="skill-card">
+        <h3>Non-Technical</h3>
+        <ul>
+          <li>Problem Solving</li>
+          <li>Adaptability</li>
+          <li>Teamwork</li>
+          <li>Self-Learning</li>
+          <li>Documentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <!-- Footer (fixed) -->
+  <footer id="contact" class="footer">
+    <p>
+    Contact info:
+    <a href="mailto:kanishkaa1302@gmail.com">kanishkaa1302@gmail.com</a> ·
+    <a href="https://github.com/kanishka1259" target="_blank">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/kanishka-senthilkumar-22b512291" target="_blank">LinkedIn</a>
+    </p>
+    <p>© 2025 Kanishka</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
